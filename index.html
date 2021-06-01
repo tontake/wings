@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Glassmorphism Website | CodingLab </title>-->
+    <!--link rel="stylesheet" href="style.css"-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	 <style>
+	 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  transition: all 0.3s ease;
+}
+body{
+  
+  color:#fff;
+  background-image: linear-gradient( 135deg, #0c2dfd  10%, #1ca4ff 100%);
+}
+main{
+  height: 100vh;;
+  width: 100%;
+  color:#fff;
+  display: flex;
+  
+  background-image: linear-gradient( 135deg, #0c2dfd  10%, #1ca4ff 100%);
+}
+::selection{
+  color: #f2f2f2;
+  background: #f86d8d;
+}
+main::before,
+main::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+main::before{
+  clip-path: circle(30% at left 20%);
+  opacity: 0.4;
+  background-image: linear-gradient( 135deg, #F6416C 10%, #ff9a9e 100%);
+}
+main::after{
+  opacity: 0.4;
+  clip-path: circle(25% at right 80%);
+  background-image: linear-gradient( 135deg, #F6416C 10%, #ff9a9e 100%);
+}
+header{
+  height: 85vh;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 12;
+  border-radius: 25px;
+  margin: auto;
+  position: relative;
+}
+header .navbar{
+  margin: auto;
+  width: 100%;
+  padding: 35px 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .menu{
+  display: flex;
+  flex-wrap: wrap;
+}
+.navbar .logo a{
+  text-decoration: none;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+}
+.navbar .menu li{
+  list-style: none;
+  margin: 0 6px;
+}
+.navbar .menu a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.navbar .menu a:hover{
+  color: #000;
+}
+.navbar .buttons input{
+  outline: none;
+  color: #f2f2f2;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 6px 15px;
+  border: none;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-image: linear-gradient( 135deg, #ff9a9e  10%, #F6416C 100%);
+}
+.navbar .buttons input:hover{
+  transform: scale(0.97);
+}
+ header .text-content{
+   width: 40%;
+   margin: 100px 0 0 50px ;
+ }
+.text-content h2{
+  font-size: 27px;
+  font-weight: 600;
+}
+.text-content p{
+  font-size: 15px;
+  margin-top: 10px;
+}
+header .play-button{
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
+}
+.play-button .play{
+  font-size: 18px;
+  font-weight: 500;
+}
+ .play-button .play::before{
+   content: '';
+   position: absolute;
+   height: 3px;
+   width: 50px;
+   top: 50%;
+   transform: translateY(-50%);
+   left: -58px;
+   background: #000;
+ }
+.play-button i{
+  height: 40px;
+  width: 40px;
+  border: 2px solid #000;
+  line-height: 38px;
+  text-align: center;
+  margin-left: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.churchinfo{
+display:flex;
+flex-direction:row;
+align-items:center;
+align-content:center;
+justify-content:space-around;
+
+
+  
+}
+@media (max-width:850px) {
+  header .navbar{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px;
+  }
+  }
+  @media (max-width:600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px;
+  }
+  .churchinfo{
+  flex-direction: column;
+    
+    justify-content: space-around;
+    padding: 15px 15px;
+  }
+  .play{
+  display:none;
+  }
+  }
+  .navbar .menu {
+    margin: 10px 0 20px 0;
+  }
+  header .text-content{
+    margin: 30px 0 0 20px ;
+    width: 70%;
+  }
+  header .text-content h2{
+    font-size: 20px;
+  }
+}
+@media (max-width:410px) {
+  header{
+    height: 100vh;
+    width: 100%;
+    border-radius: 0px;
+  }
+  header .navbar{
+    padding: 15px 10px;
+}
+}
+
+.pastors{
+
+}
+
+
+
+
+
+	 
+	 </style>
+   </head>
+<body>
+<main>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="#">ZAOGA WOP</a></div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#"> Giving</a></li>
+		<li><a href="#"> Sermons</a></li>
+		<li><a href="#"> Gallery</a></li>
+        <li><a href="#">Ministries</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Pastors Corner</a></li>
+      </ul>
+      <div class="buttons">
+        <input type="button" value="Login">
+        <input type="button" value="Register">
+      </div>
+    </nav>
+    <div class="text-content">
+      <h1 class="text-center text-dark">Wings of Prayer,</h1><br><h4>Church in the Kingdom</h4>
+      <p>Wings of Prayer is a regional church that is part of Zaoga FIFMI .It is currently pastored by Pastor T & E Patana.It is located in Queenspark East ,Bulawayo.</p>
+    </div>
+    <div class="play-button">
+      <span class="play">Founded by Apostle E . H Guti (1960)</span>
+      
+    </div>
+  </header>
+  
+  </main>
+  <section class="churchinfo">
+  <div class="card">
+  <div class="card-body">
+    <h5 class="card-title text-dark">Big Day</h5>
+    <p class="card-text text-dark"> We see a anointing</p>
+    <p class="card-text"><small class="text-muted">Big Sunday Service</small></p>
+  </div>
+  <img class="card-img-bottom" src="wingsofprayer.jpg" alt="Card image cap">
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title text-dark">Amazing Moments</h5>
+    <p class="card-text text-dark">Anniversary Celebrations</p>
+    <p class="card-text"><small class="text-muted">Anniversary Celebrations</small></p>
+  </div>
+  <img class="card-img-bottom" src="wingsofprayer5.jpg" alt="Card image cap">
+</div>
+  
+  <div class="card">
+  <div class="card-body">
+    <h5 class="card-title text-dark">Amazing Moments</h5>
+    <p class="card-text text-dark">Anniversary Celebrations</p>
+    <p class="card-text"><small class="text-muted">Anniversary Celebrations</small></p>
+  </div>
+  <img class="card-img-bottom" src="wingsofprayer2.jpg" alt="Card image cap">
+</div>
+
+ <div class="card">
+  <div class="card-body">
+    <h5 class="card-title text-dark">Amazing Moments</h5>
+    <p class="card-text text-dark">Anniversary Celebrations</p>
+    <p class="card-text"><small class="text-muted">Anniversary Celebrations</small></p>
+  </div>
+  <img class="card-img-bottom" src="wingsofprayer3.jpg" alt="Card image cap">
+</div>
+  
+  </section>
+  <section class="pastors mt-1 py-2">
+  <h3 class="text-center mt-3"> Our Regional Pastors </h3>
+  <div class="container">
+  <div class="row">
+  <div class="col-md-7">
+  <img src="pastor.png" height="500px" width="90%">
+  </div>
+  <div class="col-md-5 text-center mt-1">
+  <p class="text-center">We want to welcome you to Christ's Church. Come and join with us Sunday morning at 10:00 a.m. and experience the love of God and the truth of His Word! We believe that the message of the Gospel of Jesus Christ is for today and changes lives. Come and experience the power of a living God and what Jesus can do in your life today</p>
+  
+  <button class="btn btn-primary">Get in touch </button>
+  </div>
+  
+  
+  </div>
+  </div>
+  </section>
+  
+</body>
+</html>
